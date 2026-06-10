@@ -1,0 +1,55 @@
+{
+	"edges": [
+		{
+			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_1-capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
+			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
+			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2"
+		},
+		{
+			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_2-results",
+			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
+			"target": "results"
+		}
+	],
+	"nodes": [
+		{
+			"data": {
+				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+			},
+			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
+			"position": {
+				"x": 1437.6666666666665,
+				"y": 81.33333333333329
+			},
+			"selected": true,
+			"type": "capsule"
+		},
+		{
+			"id": "results",
+			"position": {
+				"x": 1456,
+				"y": 799.3333333333333
+			},
+			"selected": false,
+			"type": "results"
+		},
+		{
+			"data": {
+				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+			},
+			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
+			"position": {
+				"x": 1181.3333333333333,
+				"y": 445.9999999999999
+			},
+			"selected": false,
+			"type": "capsule"
+		}
+	],
+	"timestamp": 1781135492149,
+	"viewport": {
+		"x": -383.33333333333326,
+		"y": 172.5000000000001,
+		"zoom": 1
+	}
+}
