@@ -7,14 +7,23 @@
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "5443678",
-				"commit": "9b27e8690e7d0f7ac114bbc72719999e78a97b77",
+				"commit": "7bba59742ec215d9af305890e95e68eb9285a44d",
 				"image_tag": "30606f34b4f7c569dab64f37065df9d5",
 				"app_panel": true
 			},
 			"resources": {
 				"cpus": 1,
 				"memory": 8
-			}
+			},
+			"inputs": [
+				{
+					"id": "oy161pxObgG45hMf",
+					"source_id": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
+					"type": "dataset",
+					"name": "synapses_pni_2_v1_filtered_view__v1412__data-config",
+					"source_path": "synapses_pni_2_v1_filtered_view__v1412__data-config/"
+				}
+			]
 		},
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
@@ -22,7 +31,7 @@
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "5443678",
-				"commit": "9b27e8690e7d0f7ac114bbc72719999e78a97b77",
+				"commit": "7bba59742ec215d9af305890e95e68eb9285a44d",
 				"image_tag": "30606f34b4f7c569dab64f37065df9d5",
 				"app_panel": true
 			},

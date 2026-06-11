@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:2f7c8bb21657def32acea79e1a840a873306810191ed13fffde1c079e10a2e25
+// hash:sha256:275c40520620a8f43b09326de41856e681a2a4528001665970b47b39fb65ea12
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -9,8 +9,11 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	cpus 1
 	memory '7.5 GB'
 
+	input:
+	val path1
+
 	output:
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_1
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_2
 
 	script:
 	"""
@@ -26,13 +29,15 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
+	ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__data-config/$path1" "capsule/data/$path1" # id: 7c301f12-d69e-4e51-9b9d-9df03066bc1b
+
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
 		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 9b27e8690e7d0f7ac114bbc72719999e78a97b77 --quiet
+	git -C capsule-repo checkout 7bba59742ec215d9af305890e95e68eb9285a44d --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -81,7 +86,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 9b27e8690e7d0f7ac114bbc72719999e78a97b77 --quiet
+	git -C capsule-repo checkout 7bba59742ec215d9af305890e95e68eb9285a44d --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -95,7 +100,10 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 }
 
 workflow {
+	// input data
+	synapses_pni_2_v1_filtered_view__v1412__data_config_to_build_precomputed_annotation_indices_all_capsules_via_git_1 = Channel.fromPath("../data/synapses_pni_2_v1_filtered_view__v1412__data-config/*", type: 'any', relative: true)
+
 	// run processes
-	capsule_build_precomputed_annotation_indices_all_capsules_via_git_1()
-	capsule_build_precomputed_annotation_indices_all_capsules_via_git_2(capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_1)
+	capsule_build_precomputed_annotation_indices_all_capsules_via_git_1(synapses_pni_2_v1_filtered_view__v1412__data_config_to_build_precomputed_annotation_indices_all_capsules_via_git_1)
+	capsule_build_precomputed_annotation_indices_all_capsules_via_git_2(capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_2)
 }
