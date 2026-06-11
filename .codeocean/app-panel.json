@@ -2,6 +2,8 @@
 	"version": 1,
 	"processes": [
 		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
-		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_2"
+		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
+		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_3",
+		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_4"
 	]
 }
