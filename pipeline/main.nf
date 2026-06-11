@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:44a62493aa486ddc080b4f90e165cd01efdba416198347992b33a1b4916464a1
+// hash:sha256:b1e9ce7fc35ef070b3e4a7a7a0aab3b4ba573941c1072578301d910ac76cbcb8
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -64,7 +64,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	path 'capsule/data/'
 
 	output:
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_4_4
+	path 'capsule/results/input_splits/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_4_4
 
 	script:
 	"""

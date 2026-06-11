@@ -101,6 +101,7 @@
 					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
 					"type": "capsule",
 					"name": "Build precomputed annotation indices - all capsules via git",
+					"source_path": "input_splits/",
 					"target_path": "row_splits.txt",
 					"flatten": true
 				},
