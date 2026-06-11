@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:6b9813ff4b342edaabda71ce6090a09d9a7bfe238a2476542ebc4ba97993ebc4
+// hash:sha256:38b120d0acf90a1c59759061551ccddbce4480df7ad8a704a62f17ff3bca6d3b
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -39,7 +39,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 7bba59742ec215d9af305890e95e68eb9285a44d --quiet
+	git -C capsule-repo checkout fa94a130f20fb43af6e258cd1d5503575a824822 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -86,7 +86,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 7bba59742ec215d9af305890e95e68eb9285a44d --quiet
+	git -C capsule-repo checkout fa94a130f20fb43af6e258cd1d5503575a824822 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -102,7 +102,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:30606f34b4f7c569dab64f37065df9d5"
 
 	cpus 1
 	memory '7.5 GB'
@@ -135,6 +135,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
+	git -C capsule-repo checkout fa94a130f20fb43af6e258cd1d5503575a824822 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -150,7 +151,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:30606f34b4f7c569dab64f37065df9d5"
 
 	cpus 1
 	memory '7.5 GB'
@@ -185,6 +186,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
+	git -C capsule-repo checkout fa94a130f20fb43af6e258cd1d5503575a824822 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
