@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:b1e9ce7fc35ef070b3e4a7a7a0aab3b4ba573941c1072578301d910ac76cbcb8
+// hash:sha256:b741866536ad261b3b19406e0ebecf9c59ca0be59a8f9aa012bcc2641b0a4cac
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -39,7 +39,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 7965a5570982a83145da9084a2e55f3de8203fba --quiet
+	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -86,7 +86,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 7965a5570982a83145da9084a2e55f3de8203fba --quiet
+	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -135,7 +135,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 7965a5570982a83145da9084a2e55f3de8203fba --quiet
+	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -186,7 +186,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 7965a5570982a83145da9084a2e55f3de8203fba --quiet
+	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 

@@ -7,7 +7,7 @@
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "5443678",
-				"commit": "7965a5570982a83145da9084a2e55f3de8203fba",
+				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
 				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
 				"app_panel": true
 			},
@@ -31,7 +31,7 @@
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "5443678",
-				"commit": "7965a5570982a83145da9084a2e55f3de8203fba",
+				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
 				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
 				"app_panel": true
 			},
@@ -55,7 +55,7 @@
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "5443678",
-				"commit": "7965a5570982a83145da9084a2e55f3de8203fba",
+				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
 				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
 				"app_panel": true
 			},
@@ -87,7 +87,7 @@
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
 				"slug": "5443678",
-				"commit": "7965a5570982a83145da9084a2e55f3de8203fba",
+				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
 				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
 				"app_panel": true
 			},
