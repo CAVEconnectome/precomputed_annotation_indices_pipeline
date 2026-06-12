@@ -95,7 +95,7 @@
 	"nodes": [
 		{
 			"data": {
-				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
+				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
 			"position": {
@@ -116,7 +116,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
+				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
 			"position": {
@@ -132,12 +132,12 @@
 				"x": 1741.5861887191236,
 				"y": -300.07263484274733
 			},
-			"selected": true,
+			"selected": false,
 			"type": "dataset"
 		},
 		{
 			"data": {
-				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
+				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_3",
 			"position": {
@@ -149,14 +149,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
+				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
 			"position": {
 				"x": 1159.8678258471086,
 				"y": 660.1290940347652
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -217,7 +217,7 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1781295937812,
+	"timestamp": 1781297075085,
 	"viewport": {
 		"x": 70.92325535077293,
 		"y": 238.61401288965385,
