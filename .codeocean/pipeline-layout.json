@@ -65,13 +65,9 @@
 		},
 		{
 			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_7-capsule_build_precomputed_annotation_indices_all_capsules_via_git_8",
+			"selected": false,
 			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
 			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_8"
-		},
-		{
-			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_7-capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
-			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
-			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6"
 		},
 		{
 			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_5-capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
@@ -79,14 +75,15 @@
 			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6"
 		},
 		{
-			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_4-capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
-			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
-			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6"
+			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_6-capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
+			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
+			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7"
 		},
 		{
-			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_1-capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
+			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_1-capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
+			"selected": false,
 			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
-			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7"
+			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6"
 		}
 	],
 	"nodes": [
@@ -183,10 +180,10 @@
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
 			"position": {
-				"x": 602.7388776205826,
-				"y": 1339.1272497069622
+				"x": 619.2106979659338,
+				"y": 1299.5948808781188
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -195,10 +192,10 @@
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
 			"position": {
-				"x": 1019.9927291441376,
-				"y": 1488.566632281958
+				"x": 1025.9927291441377,
+				"y": 1543.566632281958
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -214,10 +211,10 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1781294425723,
+	"timestamp": 1781294532306,
 	"viewport": {
-		"x": -249.73887762058257,
-		"y": -962.6272497069622,
-		"zoom": 1
+		"x": 17.708559528991714,
+		"y": -269.62850289908374,
+		"zoom": 0.6070974421975233
 	}
 }
