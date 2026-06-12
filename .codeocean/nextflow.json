@@ -152,24 +152,18 @@
 			},
 			"inputs": [
 				{
+					"id": "jNhP17qzyD5MmrGc",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				},
+				{
 					"id": "mXBbAmRaYClnqWVA",
 					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_5",
 					"type": "capsule",
 					"name": "Build precomputed annotation indices - all capsules via git",
 					"collect": true
-				},
-				{
-					"id": "intsHh7khdFMhFms",
-					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
-					"type": "capsule",
-					"name": "Build precomputed annotation indices - all capsules via git",
-					"collect": true
-				},
-				{
-					"id": "USkIHPKQKnBWMbBD",
-					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
-					"type": "capsule",
-					"name": "Build precomputed annotation indices - all capsules via git"
 				}
 			]
 		},
@@ -187,17 +181,17 @@
 			},
 			"inputs": [
 				{
+					"id": "fjhHp4BwVgrYh6rp",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git"
+				},
+				{
 					"id": "TcD9oiPXkSP0VsSy",
 					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_5",
 					"type": "capsule",
 					"name": "Build precomputed annotation indices - all capsules via git",
 					"collect": true
-				},
-				{
-					"id": "PPUfgUIm3QNNqvsN",
-					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
-					"type": "capsule",
-					"name": "Build precomputed annotation indices - all capsules via git"
 				}
 			]
 		},
@@ -215,15 +209,15 @@
 			},
 			"inputs": [
 				{
-					"id": "aZNy03MUgyKZfWhG",
-					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
+					"id": "swxdfHMXln8OqVxJ",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
 					"type": "capsule",
 					"name": "Build precomputed annotation indices - all capsules via git",
 					"collect": true
 				},
 				{
-					"id": "swxdfHMXln8OqVxJ",
-					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
+					"id": "aZNy03MUgyKZfWhG",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
 					"type": "capsule",
 					"name": "Build precomputed annotation indices - all capsules via git",
 					"flatten": true
