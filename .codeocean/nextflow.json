@@ -4,11 +4,10 @@
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
 			"capsule": {
-				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7",
 				"name": "Build precomputed annotation indices - all capsules via git",
-				"slug": "5443678",
-				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
-				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
+				"slug": "3540450",
+				"version": 1,
 				"app_panel": true
 			},
 			"resources": {
@@ -28,11 +27,10 @@
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
 			"capsule": {
-				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7",
 				"name": "Build precomputed annotation indices - all capsules via git",
-				"slug": "5443678",
-				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
-				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
+				"slug": "3540450",
+				"version": 1,
 				"app_panel": true
 			},
 			"resources": {
@@ -52,11 +50,10 @@
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_3",
 			"capsule": {
-				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7",
 				"name": "Build precomputed annotation indices - all capsules via git",
-				"slug": "5443678",
-				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
-				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
+				"slug": "3540450",
+				"version": 1,
 				"app_panel": true
 			},
 			"resources": {
@@ -84,11 +81,10 @@
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
 			"capsule": {
-				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7",
 				"name": "Build precomputed annotation indices - all capsules via git",
-				"slug": "5443678",
-				"commit": "380ce65c04b31cdba47851c8ea9064bace829796",
-				"image_tag": "5d56ada5389ebab232cf3c5a341f734b",
+				"slug": "3540450",
+				"version": 1,
 				"app_panel": true
 			},
 			"resources": {

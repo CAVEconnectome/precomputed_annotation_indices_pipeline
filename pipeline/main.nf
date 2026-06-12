@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:b741866536ad261b3b19406e0ebecf9c59ca0be59a8f9aa012bcc2641b0a4cac
+// hash:sha256:33f6f52858d67002531de8ee6f5bceba2508375e34e24a1263666b5c2e03f815
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
-	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:5d56ada5389ebab232cf3c5a341f734b"
+	tag 'capsule-3540450'
+	container "$REGISTRY_HOST/published/65b548ab-780c-4f5a-bfb6-1a72653eeef7:v1"
 
 	cpus 1
 	memory '7.5 GB'
@@ -22,7 +22,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=1c40bced-b7eb-41cb-9d2d-1d714f8e31e8
+	export CO_CAPSULE_ID=65b548ab-780c-4f5a-bfb6-1a72653eeef7
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -35,11 +35,10 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -54,8 +53,8 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
-	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:5d56ada5389ebab232cf3c5a341f734b"
+	tag 'capsule-3540450'
+	container "$REGISTRY_HOST/published/65b548ab-780c-4f5a-bfb6-1a72653eeef7:v1"
 
 	cpus 1
 	memory '7.5 GB'
@@ -71,7 +70,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=1c40bced-b7eb-41cb-9d2d-1d714f8e31e8
+	export CO_CAPSULE_ID=65b548ab-780c-4f5a-bfb6-1a72653eeef7
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -82,11 +81,10 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -101,8 +99,8 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
-	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:5d56ada5389ebab232cf3c5a341f734b"
+	tag 'capsule-3540450'
+	container "$REGISTRY_HOST/published/65b548ab-780c-4f5a-bfb6-1a72653eeef7:v1"
 
 	cpus 1
 	memory '7.5 GB'
@@ -118,7 +116,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=1c40bced-b7eb-41cb-9d2d-1d714f8e31e8
+	export CO_CAPSULE_ID=65b548ab-780c-4f5a-bfb6-1a72653eeef7
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -131,11 +129,10 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -150,8 +147,8 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
-	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:5d56ada5389ebab232cf3c5a341f734b"
+	tag 'capsule-3540450'
+	container "$REGISTRY_HOST/published/65b548ab-780c-4f5a-bfb6-1a72653eeef7:v1"
 
 	cpus 1
 	memory '7.5 GB'
@@ -171,7 +168,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=1c40bced-b7eb-41cb-9d2d-1d714f8e31e8
+	export CO_CAPSULE_ID=65b548ab-780c-4f5a-bfb6-1a72653eeef7
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -182,11 +179,10 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
+		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 380ce65c04b31cdba47851c8ea9064bace829796 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
