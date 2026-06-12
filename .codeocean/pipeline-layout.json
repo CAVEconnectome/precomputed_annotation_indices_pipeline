@@ -50,7 +50,7 @@
 	"nodes": [
 		{
 			"data": {
-				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
 			"position": {
@@ -71,14 +71,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
 			"position": {
 				"x": 1162.4022357645142,
 				"y": 394.88603656418866
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -104,7 +104,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+				"capsule_id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7"
 			},
 			"id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
 			"position": {
@@ -120,11 +120,11 @@
 				"x": 456.09627275980404,
 				"y": 83.9860146893529
 			},
-			"selected": true,
+			"selected": false,
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1781136991828,
+	"timestamp": 1781223407508,
 	"viewport": {
 		"x": -58.05213290153256,
 		"y": 254.95647654750735,
