@@ -76,7 +76,7 @@
 		},
 		{
 			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_6-capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
-			"selected": true,
+			"selected": false,
 			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_6",
 			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7"
 		},
@@ -129,10 +129,10 @@
 		{
 			"id": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
 			"position": {
-				"x": 1706.8067366058415,
-				"y": -272.2490731521216
+				"x": 1741.5861887191236,
+				"y": -300.07263484274733
 			},
-			"selected": false,
+			"selected": true,
 			"type": "dataset"
 		},
 		{
@@ -162,8 +162,8 @@
 		{
 			"id": "bacb8982-892d-437b-b732-de1257e7a398",
 			"position": {
-				"x": 456.09627275980404,
-				"y": 83.9860146893529
+				"x": 722.7387389616338,
+				"y": 14.427110462788633
 			},
 			"selected": false,
 			"type": "dataset"
@@ -217,10 +217,10 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1781294812761,
+	"timestamp": 1781295937812,
 	"viewport": {
-		"x": -238.8354193284763,
-		"y": 13.205374924238072,
-		"zoom": 0.5924017079117498
+		"x": 70.92325535077293,
+		"y": 238.61401288965385,
+		"zoom": 0.4312891402412736
 	}
 }
