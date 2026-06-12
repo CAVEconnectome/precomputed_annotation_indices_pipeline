@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:0b926fa95f8d1b64cee0fb5e728ef5f35d0097a43920c943e2b0f1ae156e8bc7
+// hash:sha256:5648575333b17398f54ecd06c81fc289cd322480b72b6f453d319986fba2df07
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -41,7 +41,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -88,7 +88,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -137,7 +137,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -185,7 +185,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -234,7 +234,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -283,7 +283,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -332,7 +332,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -382,7 +382,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout af3ea61f8e31dc0dbfb2905f140022d4c0c79303 --quiet
+	git -C capsule-repo checkout a663e3893dcf5b9cb6a94a4d57f30ad25203c2fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
