@@ -47,7 +47,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_1_args}
 
@@ -95,7 +94,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_args}
 
@@ -145,7 +143,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_3_args}
 
@@ -194,7 +191,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_5_args}
 
@@ -244,7 +240,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_4_args}
 
@@ -294,7 +289,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_6_args}
 
@@ -344,7 +338,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_7_args}
 
@@ -395,7 +388,6 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_8_args}
 
