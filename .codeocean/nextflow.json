@@ -246,6 +246,124 @@
 			"results": {
 				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 			}
+		},
+		{
+			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_9",
+			"capsule": {
+				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"name": "Build precomputed annotation indices - all capsules via git",
+				"slug": "5443678",
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "o91ileCH4SQeKKSM",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_10",
+			"capsule": {
+				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"name": "Build precomputed annotation indices - all capsules via git",
+				"slug": "5443678",
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "NtWU4OOZ0m7byp3m",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_9",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				},
+				{
+					"id": "tmBjhMPqEZnQlzlh",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_11",
+			"capsule": {
+				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"name": "Build precomputed annotation indices - all capsules via git",
+				"slug": "5443678",
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "uNqG6pj1Fk0RCbOM",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_9",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				},
+				{
+					"id": "ncV2WUxxPMD8NELJ",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_10",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				},
+				{
+					"id": "Ig5GgyFeIGziS8K3",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git"
+				}
+			]
+		},
+		{
+			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_12",
+			"capsule": {
+				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
+				"name": "Build precomputed annotation indices - all capsules via git",
+				"slug": "5443678",
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "iNikIyWmaXRfHm5U",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_11",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"collect": true
+				},
+				{
+					"id": "9lv4onX4RNxjuUcy",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_10",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git",
+					"flatten": true
+				}
+			],
+			"results": {
+				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
+			}
 		}
 	]
 }
