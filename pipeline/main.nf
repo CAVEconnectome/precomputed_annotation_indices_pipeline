@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:0eafe871b82b79cc78bbc1bc7d96ef8356143a557bf075776a6579c141152d64
+// hash:sha256:bbfde75f38b52698429309c146fdcf0c46532abf500eec55d553d7353c0be2a5
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -43,7 +43,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -90,7 +90,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -139,7 +139,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -187,7 +187,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -235,7 +235,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -284,7 +284,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_10 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -334,7 +334,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -383,7 +383,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -432,7 +432,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_11 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -481,7 +481,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -531,7 +531,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_12 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -581,7 +581,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	else
 		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3919fa3c00799d058fb6900d660ae0019aabaca9 --quiet
+	git -C capsule-repo checkout b9ed51cf2ee320f6e991942bb1882f817379a90f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
