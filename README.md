@@ -46,7 +46,7 @@ Here are the main stages to produce a precomputed annotation index from an annot
 
 Here's the detailed walkthrough:
 
-1. Export the table from the database as a local CSV or Parquet file. Take note of the exact column names and ordering. You will need that.
+1. Export your data table as a local CSV or Parquet file. Take note of the exact column names and ordering. You will need that.
 2. Create a data config json file. The name doesn't matter.
 	1. Start from a local copy of the template provided in this repo (*data\_config\_template.json*) and populate all the required fields (indicated in all-caps). This file must end up as legal JSON. Pass it through a JSON validator after you fill it in. Several are readily found online. If aspects of the template are confusing, use the example file (*data\_config\_example.json*) to guide you. It shows a fully populated config file for the MICrONS synapse annotation table.
 	2. Amongst other aspects of the data for this template, you will need:
@@ -83,7 +83,7 @@ Here's the detailed walkthrough:
 		16. Congratulations on completing the data config file. 
 3. Upload the CSV or Parquet data file and the data config json file to Code Ocean as two new Data Assets.
 	1. TODO: provide some description of this process within the Code Ocean interface.
-4. Open the Code Ocean pipeline: [https://codeocean.allenneuraldynamics.org/capsule/1541857/tree](https://codeocean.allenneuraldynamics.org/capsule/1541857/tree)
+4. Open the Code Ocean pipeline: [https://codeocean.allenneuraldynamics.org/capsule/4277869/tree](https://codeocean.allenneuraldynamics.org/capsule/4277869/tree)
 
 	<p align="center">
 	<img src="./images/pipeline_template.png">
@@ -156,7 +156,9 @@ Here's the detailed walkthrough:
 	<img src="./images/app_builder_tab.png" width="33%">
 	</p>
 	
-12. ***Optionally*** set the ***data\_source\_name*** parameter to the data size label indicated in your data config json file (in the json's "data_sizes" section). You only have to do this if the config file indicates multiple data options. For example, you might offer smaller subsets of the main data intended for development or debugging. For the tutorial, you don't have to do anything here. The default value of ***unspecified*** will suffice.
+12. With the App Builder panel visible on the left side of the view, look at the right side now. If you don't see the ***Run with parameters*** button, click the ***Reproducibility*** button to open the right panel. Click the ***Show more history*** button at the bottom. The first historical run will be labeled *"Run With Parameters 1762007"* with timestamp *"Jun 17, 2026 22:53"*. Click the upper of the two three-dot menus (the one directly next to the duration *"00:00:58"*) to open the menu. Click the ***Parameter values*** option to open the parameters from that previous run. At the top of the parameters view, click the ***three-sliders*** button (it has a hover text that says *"Apply to App Panel"*). This will immediately populate all the necessary hard-coded parameters in the App Builder on the left side of the overall view.
+
+13. ***Optionally*** set the ***data\_source\_name*** parameter of the ***capsule\_generate\_config*** capsule (the first and top set of parameters in the App Builder) This is the only parameter you might need to specialize to your data and your pipeline run. If needed, set this parameter to the data size label of your preference indicated in your data config json file (in the json's "data_sizes" section). You only have to assign this parameter if the config file indicates multiple data options and you don't want to use the largest option. For example, you might offer smaller subsets of the main data intended for development or debugging. For the tutorial, you don't have to do anything here. The default value of an empty string will use the largest dataset specified in the config file. Notice that in the config json file we added to the project, the "data_sizes" section only contains a single entry.
 
 	Here's a helpful way to find a string to populate this parameter without going back to the json file on your local computer:
 	1. Switch from the App Builder view to the Files view.
