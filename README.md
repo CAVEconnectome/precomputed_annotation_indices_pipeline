@@ -166,7 +166,7 @@ Here's the detailed walkthrough:
 	3. Click the json file. This will open the file in a new tab in the main display shared by the canvas.
 	4. Find the "data_sizes" section in the json file. Then find the label you assigned, and copy it. You can then return to the App Builder panel shown below and paste it into the ***data\_source\_name*** parameter.
 
-	As stated above, if you don't wish to choose between multiple datasets, the default value of ***unspecified*** will work fine. Other values that mean "Use whatever is available in the config file" are ***na***, ***none***, and ***a single space character*** (since the App Builder interface will not permit a blank parameter value).
+	As stated above, if you don't wish to choose between multiple datasets, leaving the parameter field in the App Builder blank will work fine. Other values that mean "Use whatever is available in the config file" are ***na***, ***none***, and ***a single space character*** (since the App Builder interface will not permit a blank parameter value).
 
 	<p align="center">
 	<img src="./images/app_builder_panel.png" width="50%">
