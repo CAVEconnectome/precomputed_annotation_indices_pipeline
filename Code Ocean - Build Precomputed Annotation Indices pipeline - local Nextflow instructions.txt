@@ -39,21 +39,21 @@ pipeline/
   ...
 metadata/
   ...
-data/  synapses_pni_2_v1_filtered_view__v1412__data-config/    synapses_pni_2_v1_filtered_view__v1412__data-config.json  synapses_pni_2_v1_filtered_view__v1412__test1/
+data/  synapses_pni_2_v1_filtered_view__v1412__data-config/    synapses_pni_2_v1_filtered_view__v1412__data-config.json  synapses_pni_2_v1_filtered_view__v1412__test/
     synapses_pni_2_v1_filtered_view__1-root-ids_337312429-row-limit_2108-rows.csv  synapses_pni_2_v1_filtered_view__v1412/
-    synapses_pni_2_v1_filtered_view__1-root-ids_337312429-row-limit_all-rows.csv
+    synapses_pni_2_v1_filtered_view__10-root-ids_337312429-row-limit_24426-rows.csv
 
 Or without a test subset, it could look like this:
 
 data/  synapses_pni_2_v1_filtered_view__v1412__data-config/    synapses_pni_2_v1_filtered_view__v1412__data-config.json  synapses_pni_2_v1_filtered_view__v1412/
-    synapses_pni_2_v1_filtered_view__1-root-ids_337312429-row-limit_all-rows.csv
+    synapses_pni_2_v1_filtered_view__10-root-ids_337312429-row-limit_24426-rows.csv
 ____________________________________________________________________________________________________
 SPECIFYING THE DATA SOURCE
 ----------
 
 The pipeline comes with hard-coded assumptions or expectations about the names associated with the data, simply the names I used during development. You can see them in the previous section:
   synapses_pni_2_v1_filtered_view__v1412
-  synapses_pni_2_v1_filtered_view__v1412__test1
+  synapses_pni_2_v1_filtered_view__v1412__test
 
 The first data name indicates the overall name of the data and the second offers the option of indicating various subsets within the overall data. Such subsets must be named via suffixes of the overall name (they must perfectly contain the overall data name as a prefix, with some subset of your choosing indicated as a suffix, in the case shown above: "__test1"). Open nextflow.config and find the first line in the params section:
   capsule_build_precomputed_annotation_indices_all_capsules_via_git_1_args = "--capsule='capsule_generate_config' --data_source_name='synapses_pni_2_v1_filtered_view__v1412__test1'"
@@ -66,14 +66,14 @@ CREATING THE DATA CONFIG FILE
 You already have your data; you brought that on your own. But you need the data-config.json file as well, indicated above. Creating such a file is described in detail in the Git repo README (which will have come down to your local machine when you cloned it at the top of these instructions; it's next to this instructions.txt file in fact), so I won't repeat the same information here, but note the relationship between the "data_sizes" section of the data-config file and the two directory names shown in the previous section. Make sure they align. There should be a data_size entry for each subset you might wish to create and work with. Furthermore, there should be on data_size entry that matches the overall data name, which will indicate the full dataset. For the data layout shown above, the data-config file would need a data_sizes section that looks like this:
 
     "data_sizes" : {
-        "synapses_pni_2_v1_filtered_view__v1412__test":    [37056517,    247392],
-        "synapses_pni_2_v1_filtered_view__v1412":       [50345534259, 337312429]
+        "synapses_pni_2_v1_filtered_view__v1412__test":  [313245,  2108],
+        "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426]
     },
 
 Data subsets are optional. Without one, data_size section of the data-config file would simply look like this:
 
     "data_sizes" : {
-        "synapses_pni_2_v1_filtered_view__v1412":       [50345534259, 337312429]
+        "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426],
     },
 
 ____________________________________________________________________________________________________

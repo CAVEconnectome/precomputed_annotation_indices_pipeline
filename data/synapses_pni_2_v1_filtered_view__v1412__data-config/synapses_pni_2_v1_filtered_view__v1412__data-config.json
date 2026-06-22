@@ -5,7 +5,7 @@
     "data_sizes" : {
         "docstring": "A tuple indicating: (1) Num bytes and (2) num records (i.e. table/CSV rows, etc.) in the data. Multiple data sizes are supported via Code Ocean data source names to facilitate development/debugging against smaller subsets of the data.",
         "synapses_pni_2_v1_filtered_view__v1412__test":  [313245,  2108],
-        "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426],
+        "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426]
     },
     "volume_bounds": [
         [52708, 64831, 14838],
