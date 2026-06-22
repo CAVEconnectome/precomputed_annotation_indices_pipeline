@@ -1,17 +1,21 @@
 ____________________________________________________________________________________________________
-DOWNLOADING THE PIPELINE
+NEXTFLOW AND DOCKER PREREQUISITES
 ----------
-
-THIS FILE WAS CREATED BY COPYING IT FROM THE OTHER REPO. I NEED TO ADAPT IT TO THIS REPO, AND WHEN DONE, I WILL HOPEFULLY REMEMBER TO REMOVE THIS NOTE. UNTIL THEN, THIS DOCUMENT SHOULD BE ASSUMED TO BE INCORRECT.
 
 First, install Nextflow, which itself will require installing Java:
   https://www.nextflow.io/docs/latest/install.html
 
-Clone this repo:
+Then, on a Mac at any rate, you need to download and run the Docker desktop app. Go for it. I can't offer guidance on other platforms, but I'm sure it's similar. Nextflow will then utilize the running Docker environment for the pipeline.
+
+____________________________________________________________________________________________________
+DOWNLOADING THE PIPELINE
+----------
+
+Clone the repo:
 $ git clone https://github.com/CAVEconnectome/precomputed_annotation_indices_pipeline.git
 $ cd precomputed_annotation_indices_pipeline
 
-You will get a directory that looks like this:
+You will get a directory that contains the follow (plus some other stuff):
 precomputed_annotation_indices_pipeline/
   metadata/
     metadata.yml
@@ -19,13 +23,10 @@ precomputed_annotation_indices_pipeline/
     main.nf
     nextflow.config
   data_config_template.json  data_config_example.json
-  <...various extraneous git stuff...>
+  data/
+    <...3 subdirectories...>
 
-____________________________________________________________________________________________________
-DATA
-----------
-
-On a Mac you need to download and run the Docker desktop app. Go for it. I can't offer guidance on other platforms, but I'm sure it's similar. Nextflow will then utilize the running Docker environment for the pipeline.
+Theoretically, you can run this repo right out of the box since it includes a small sample of data. So if you want to skip to the bottom to see if it'll work, give it a shot. Once you confirm that you have Nextflow and Docker all set up correctly, return to this point and go through these instructions to configure a run against your own data. 
 
 ____________________________________________________________________________________________________
 DATA
@@ -49,26 +50,31 @@ ________________________________________________________________________________
 CREATING THE DATA CONFIG FILE
 ----------
 
-You already have your data; you brought that on your own. But you need to create the data-config.json file as well, indicated above. Creating such a file is described in detail in the Git repo README (which will have come down to your local machine when you cloned it at the top of these instructions; it's next to this instructions.txt file in fact), so I won't repeat the same information here, but note the relationship between the "data_sizes" section of the data-config file and the various directory names shown in the previous section. Make sure they align. There should be a data_size entry for the overall data and for any subset you wish to create. For the data layout shown above, the data-config file would need a data_sizes section that looks like this:
+You already have your data; you brought that on your own. But you need to create the data-config.json file as well, indicated above. Creating such a file is described in detail in the Git repo README (which will have come down to your local machine when you cloned it at the top of these instructions; it's next to this instructions.txt file in fact), so I won't repeat the same information here, but note the relationship between the "data_sizes" section of that json file and the various directory names shown in the previous section. Make sure they align. There should be a data_size entry for the overall data and for any subset you wish to create. For the data layout shown above, the data-config file would need a "data_sizes" section that looks like this:
 
     "data_sizes" : {
         "synapses_pni_2_v1_filtered_view__v1412__test":  [313245,  2108],
         "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426]
     },
 
-Data subsets are optional. Without one, the data_size section of the data-config file would simply look like this:
+Data subsets are optional. Without one, the "data_sizes" section would simply look like this:
 
     "data_sizes" : {
         "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426],
     },
 
+Obviously, you can name your data anything want so long as you keep track of using the same string in the necessary places.
+
 ____________________________________________________________________________________________________
 RUNNING THE PIPELINE
 ----------
 
-When running the pipeline, you specify the overall data name and the specific data subset you wish to run. If you only have one (the entire dataset) or you intend to process the entire dataset, then pass in the same string for both the "data_name" and "datasubset_name" arguments.
+When running the pipeline, you specify the overall data name and the specific data subset you wish to run. If you only have one (the entire dataset) or you intend to process the entire dataset in a give run, then pass in the same string for both the "data_name" and "datasubset_name" arguments below.
 
-To run the pipeline against a subset, do this (substituting your own data and subset names):
+You need to be in the pipeline/ directory to run it, so:
+$ cd pipeline
+
+To run the pipeline against a subset, do this (substituting your own data and subset names in the last two lines of the command):
 $ rm -rf work && \
   DATA_PATH=$PWD/../data \
   nextflow -log ../results/nextflow/nextflow.log run main.nf \
@@ -83,4 +89,6 @@ ________________________________________________________________________________
 SEEING THE RESULTS
 ----------
 
-In the Nextflow export directory, you will see a results/ directory. It should have a subdirectory and file structure that closely mirrors the results as observed in Code Ocean. Note that none of the directories are files are direct file references however. They are all links to results files that actually reside inside individual capsule work directories in the pipeline/work/ directory.
+After running, you will see a results/ directory. Note that none of the directories are files are direct file references however. They are all links to results files that actually reside inside individual capsule work directories in the pipeline/work/ directory.
+
+Good luck. Contact Keith Wiley for support, as needed.
