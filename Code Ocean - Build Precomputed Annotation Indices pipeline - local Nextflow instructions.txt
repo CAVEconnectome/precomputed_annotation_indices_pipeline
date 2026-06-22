@@ -68,12 +68,16 @@ RUNNING THE PIPELINE
 
 When running the pipeline, you specify the overall data name and the specific data subset you wish to run. If you only have one (the entire dataset) or you intend to process the entire dataset, then pass in the same string for both the "data_name" and "datasubset_name" arguments.
 
-To run the pipeline:
+To run the pipeline against a subset, do this (substituting your own data and subset names):
 $ rm -rf work && \
   DATA_PATH=$PWD/../data \
   nextflow -log ../results/nextflow/nextflow.log run main.nf \
   --data_name synapses_pni_2_v1_filtered_view__v1412 \
   --datasubset_name synapses_pni_2_v1_filtered_view__v1412__test
+
+Or to process a full dataset, use this (pass the same value for both arguments):
+  --data_name synapses_pni_2_v1_filtered_view__v1412 \
+  --datasubset_name synapses_pni_2_v1_filtered_view__v1412
 
 ____________________________________________________________________________________________________
 SEEING THE RESULTS
