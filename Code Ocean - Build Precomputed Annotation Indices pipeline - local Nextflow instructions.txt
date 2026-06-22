@@ -31,9 +31,7 @@ ________________________________________________________________________________
 DATA
 ----------
 
-You need to move your data into the repo at the path where Nextflow will expect to find it.
-
-The pipeline will expect to find the data in a data/ directory at the same level as the pipeline/ directory (so, outside, but next to, the pipeline/ and metadata/ directories). Within data/, there should be at least two subdirectories, one to hold the data-config file and one to hold the data. There can be additional data directories, which can be used to indicate smaller test subsets. Here is an example:
+You need to move your data into the repo at the path where Nextflow will expect to find it. The repo includes a small example to show you the necessary layout. The pipeline will expect to find the data in a data/ directory at the same level as the pipeline/ directory (so, outside, but next to, the pipeline/ and metadata/ directories). Within data/, there should be at least two subdirectories, one to hold the data-config file and one to hold the data. There can be additional data directories, which can be used to indicate smaller test subsets. Here is an example showing one such subset named "__test":
 
 pipeline/
   ...
@@ -43,34 +41,22 @@ data/  synapses_pni_2_v1_filtered_view__v1412__data-config/    synapses_pni_2_
     synapses_pni_2_v1_filtered_view__1-root-ids_337312429-row-limit_2108-rows.csv  synapses_pni_2_v1_filtered_view__v1412/
     synapses_pni_2_v1_filtered_view__10-root-ids_337312429-row-limit_24426-rows.csv
 
-Or without a test subset, it could look like this:
+Or without a test subset, it would look like this:
 
 data/  synapses_pni_2_v1_filtered_view__v1412__data-config/    synapses_pni_2_v1_filtered_view__v1412__data-config.json  synapses_pni_2_v1_filtered_view__v1412/
     synapses_pni_2_v1_filtered_view__10-root-ids_337312429-row-limit_24426-rows.csv
 ____________________________________________________________________________________________________
-SPECIFYING THE DATA SOURCE
-----------
-
-The pipeline comes with hard-coded assumptions or expectations about the names associated with the data, simply the names I used during development. You can see them in the previous section:
-  synapses_pni_2_v1_filtered_view__v1412
-  synapses_pni_2_v1_filtered_view__v1412__test
-
-The first data name indicates the overall name of the data and the second offers the option of indicating various subsets within the overall data. Such subsets must be named via suffixes of the overall name (they must perfectly contain the overall data name as a prefix, with some subset of your choosing indicated as a suffix, in the case shown above: "__test1"). Open nextflow.config and find the first line in the params section:
-  capsule_build_precomputed_annotation_indices_all_capsules_via_git_1_args = "--capsule='capsule_generate_config' --data_source_name='synapses_pni_2_v1_filtered_view__v1412__test1'"
-
-Obviously, you need to replace "synapses_pni_2_v1_filtered_view__v1412__test1" with the directory name containing your data, as you arranged in the previous section. This is also where you choose between the overall dataset or some subset. Just make it match the directory you want and you'll be good to go.
-____________________________________________________________________________________________________
 CREATING THE DATA CONFIG FILE
 ----------
 
-You already have your data; you brought that on your own. But you need the data-config.json file as well, indicated above. Creating such a file is described in detail in the Git repo README (which will have come down to your local machine when you cloned it at the top of these instructions; it's next to this instructions.txt file in fact), so I won't repeat the same information here, but note the relationship between the "data_sizes" section of the data-config file and the two directory names shown in the previous section. Make sure they align. There should be a data_size entry for each subset you might wish to create and work with. Furthermore, there should be on data_size entry that matches the overall data name, which will indicate the full dataset. For the data layout shown above, the data-config file would need a data_sizes section that looks like this:
+You already have your data; you brought that on your own. But you need to create the data-config.json file as well, indicated above. Creating such a file is described in detail in the Git repo README (which will have come down to your local machine when you cloned it at the top of these instructions; it's next to this instructions.txt file in fact), so I won't repeat the same information here, but note the relationship between the "data_sizes" section of the data-config file and the various directory names shown in the previous section. Make sure they align. There should be a data_size entry for the overall data and for any subset you wish to create. For the data layout shown above, the data-config file would need a data_sizes section that looks like this:
 
     "data_sizes" : {
         "synapses_pni_2_v1_filtered_view__v1412__test":  [313245,  2108],
         "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426]
     },
 
-Data subsets are optional. Without one, data_size section of the data-config file would simply look like this:
+Data subsets are optional. Without one, the data_size section of the data-config file would simply look like this:
 
     "data_sizes" : {
         "synapses_pni_2_v1_filtered_view__v1412":       [3645906, 24426],
@@ -80,8 +66,14 @@ ________________________________________________________________________________
 RUNNING THE PIPELINE
 ----------
 
+When running the pipeline, you specify the overall data name and the specific data subset you wish to run. If you only have one (the entire dataset) or you intend to process the entire dataset, then pass in the same string for both the "data_name" and "datasubset_name" arguments.
+
 To run the pipeline:
-$ rm -rf work && DATA_PATH=$PWD/../data nextflow -log ../results/nextflow/nextflow.log run main.nf
+$ rm -rf work && \
+  DATA_PATH=$PWD/../data \
+  nextflow -log ../results/nextflow/nextflow.log run main.nf \
+  --data_name synapses_pni_2_v1_filtered_view__v1412 \
+  --datasubset_name synapses_pni_2_v1_filtered_view__v1412__test
 
 ____________________________________________________________________________________________________
 SEEING THE RESULTS
