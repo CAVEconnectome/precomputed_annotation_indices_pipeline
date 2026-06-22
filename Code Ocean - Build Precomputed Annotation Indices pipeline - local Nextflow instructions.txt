@@ -91,4 +91,10 @@ SEEING THE RESULTS
 
 After running, you will see a results/ directory. Note that none of the directories are files are direct file references however. They are all links to results files that actually reside inside individual capsule work directories in the pipeline/work/ directory.
 
+____________________________________________________________________________________________________
+WORKING WITH DISPARATE DATA
+----------
+
+Notice how easy it is to work with numerous, unrelated datasets. You may be working on synpase data and axon data, or on fly data and mouse data, or multiple different data across a wide variety of domains and projects. Simply give each dataset a unique name and collect them all in the data/ directory, along with their associated data-config.json file, which you must create once for each new dataset. Then you can indicate whichever dataset (and test subset) you want with the run command.
+
 Good luck. Contact Keith Wiley for support, as needed.
