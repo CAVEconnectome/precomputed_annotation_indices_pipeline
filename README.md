@@ -99,7 +99,7 @@ Here's the detailed walkthrough:
 		</p>
 
 	2. Please confirm that you are working in a new pipeline. The pipeline's name along the top of the display will show "Copy of" if you were succesful. Feel free to rename the pipeline if you wish. Simply click on the name to edit it.
-
+	
 		<p align="center">
 		<img src="./images/pipeline_copy.png" width="50%">
 		</p>
@@ -107,27 +107,31 @@ Here's the detailed walkthrough:
 6. In the upper-left corner, along the left edge, vertically, notice ***Files***, ***App Builder***, and ***Tabs***. Select ***Files***. Next to the ***data*** section, notice, ***Manage*** with an associated gear icon.
 	
 	<p align="center">
-	<img src="./images/pipeline_files.png" width="50%">
+	<img src="./images/pipeline_files.png" width="25%">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="./images/pipeline_files_data_manage.png" width="33%">
 	</p>
 
 7. Click the Manage icon, which will open a chooser in the right half of the view.
+
+	<p align="center">
+	<img src="./images/data_asset_management.png">
+	</p>
 	
 	1. Find your new data config json asset and add it to the pipeline.
 	2. Find your new data asset and add it to the pipeline.
 
 	<p align="center">
-	<img src="./images/data_asset_management.png" width="33%">
+	<img src="./images/data_asset_management_hover_config.png" width="33%">
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="./images/data_asset_management_data_config.png" width="33%" style="margin-left:50px">
+	<img src="./images/data_asset_management_hover_data.png" width="33%" style="margin-left:50px">
 	</p>
 	
 	<p align="center">
 	<img src="./images/data_assets_added_to_pipeline.png">
 	</p>
 
-8. Drag both the data config asset and the data asset from the data section on the left half of the view to the "canvas". Place them in the upper-left region of the canvas so their connections will be easy to create.
+8. Drag both the data config asset and the data asset from the data section on the left half of the view to the *gridded canvas*. Place them in the upper-left region of the canvas so their connections will be easy to create. The config asset is the one placed farther to the right, near the top-most capsule of the flow diagram.
 
 	<p align="center">
 	<img src="./images/data_assets_added_to_canvas.png" width="67%">
@@ -141,24 +145,55 @@ Here's the detailed walkthrough:
 
 10. Edit the data connection:
 	1. Click the gear icon of the connection to open its settings.
+
+	<p align="center">
+	<img src="./images/data_connected.png" width="25%">
+	</p>
+	
 	2. Change the ***Connection Type*** from *Default* to *Collect*.
 	3. Click Confirm.
 
 	<p align="center">
-	<img src="./images/data_connected.png" width="25%" style="margin-left:50px">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="./images/edit_data_connection.png" width="33%">
+	<img src="./images/edit_data_connection.png" width="67%">
 	</p>
 
-11. In the upper-left corner, select ***App Builder***.
+11. In the upper-left corner, select ***App Builder*** to reveal a new panel on the left side of the view. With the App Builder panel visible on the left side of the view, look at the right side now. If you don't see the ***Run with parameters*** button, click the ***Reproducibility*** button to open the right panel. Click the ***Show more history*** button at the bottom.
 
 	<p align="center">
 	<img src="./images/app_builder_tab.png" width="33%">
 	</p>
-	
-12. With the App Builder panel visible on the left side of the view, look at the right side now. If you don't see the ***Run with parameters*** button, click the ***Reproducibility*** button to open the right panel. Click the ***Show more history*** button at the bottom. The first historical run will be labeled *"Run With Parameters 1762007"* with timestamp *"Jun 17, 2026 22:53"*. Click the upper of the two three-dot menus (the one directly next to the duration *"00:00:58"*) to open the menu. Click the ***Parameter values*** option to open the parameters from that previous run. At the top of the parameters view, click the ***three-sliders*** button (it has a hover text that says *"Apply to App Panel"*). This will immediately populate all the necessary hard-coded parameters in the App Builder on the left side of the overall view.
 
-13. ***Optionally*** set the ***data\_source\_name*** parameter of the ***capsule\_generate\_config*** capsule (the first and top set of parameters in the App Builder) This is the only parameter you might need to specialize to your data and your pipeline run. If needed, set this parameter to the data size label of your preference indicated in your data config json file (in the json's "data_sizes" section). You only have to assign this parameter if the config file indicates multiple data options and you don't want to use the largest option. For example, you might offer smaller subsets of the main data intended for development or debugging. For the tutorial, you don't have to do anything here. The default value of an empty string will use the largest dataset specified in the config file. Notice that in the config json file we added to the project, the "data_sizes" section only contains a single entry.
+	<p align="center">
+	<img src="./images/app_builder.png">
+	</p>
+
+12. The first historical run will be labeled *"Run With Parameters 1762007"* with timestamp *"Jun 17, 2026 22:53"*.
+
+	<p align="center">
+	<img src="./images/reproducibility.png">
+	</p>
+	
+	Click the upper of the two three-dot menus (the one directly next to the duration *"00:00:58"*) to open the menu. Click the ***Parameter values*** option to open the parameters from that previous run. At the top of the parameters view, click the ***three-sliders*** button (it has a hover text that says *"Apply to App Panel"*).
+	
+	<p align="center">
+	<img src="./images/run_history.png" width="33%" style="margin-left:50px">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="./images/run_history_param_values.png" width="33%">
+	</p>
+		
+	This will immediately populate all the necessary hard-coded parameters in the App Builder on the left side of the overall view.
+	
+	<p align="center">
+	<img src="./images/app_builder_populated.png">
+	</p>
+
+13. ***Optionally*** set the ***data\_source\_name*** parameter of the ***capsule\_generate\_config*** capsule (the first set of parameters in the App Builder) 
+
+	<p align="center">
+	<img src="./images/app_builder_data_source_name.png" width="33%">
+	</p>
+
+	This is the only parameter you might need to specialize to your data and your pipeline run. If needed, set this parameter to the data size label of your preference indicated in your data config json file (in the json's "data_sizes" section). You only have to assign this parameter if you have arranged your config file to indicate multiple data options and you don't want to use the largest option (presumably the full dataset). For example, you might offer smaller subsets of the main data intended for development or debugging, and those are the ones you must specify with this parameter if you wish to use them. For the tutorial, you don't have to do anything here since the tutorial config only indicates on dataset anyway. The default value of an empty string will use the largest (and only) dataset specified in the config file. Notice that in the config json file we added to the project, the "data\_sizes" section only contains a single entry.
 
 	Here's a helpful way to find a string to populate this parameter without going back to the json file on your local computer:
 	1. Switch from the App Builder view to the Files view.
@@ -166,19 +201,15 @@ Here's the detailed walkthrough:
 	3. Click the json file. This will open the file in a new tab in the main display shared by the canvas.
 	4. Find the "data_sizes" section in the json file. Then find the label you assigned, and copy it. You can then return to the App Builder panel shown below and paste it into the ***data\_source\_name*** parameter.
 
-	As stated above, if you don't wish to choose between multiple datasets, leaving the parameter field in the App Builder blank will work fine. Other values that mean "Use whatever is available in the config file" are ***na***, ***none***, and ***a single space character*** (since the App Builder interface will not permit a blank parameter value).
-
-	<p align="center">
-	<img src="./images/app_builder_panel.png" width="50%">
-	</p>
+	As stated above, if you don't wish to choose between multiple datasets, leaving the parameter field in the App Builder blank will work fine. Other values that mean "Use the largest dataset available in the config file" are ***na***, ***none***, and ***a single space character*** (since the App Builder interface will not permit a blank parameter value).
 	
-13. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.
+14. In the upper-right corner, notice the ***Run with parameters*** button. If you don't see it, toggle the ***Reproducibility*** option in the upper-right corner to reveal the button. Note that there is also a ***Run*** button in the App Builder section you just populated; I think both buttons do the same thing. Click one of these buttons to run the pipeline.
 
 	<p align="center">
 	<img src="./images/reproducility_section_and_run_button.png" width="33%">
 	</p>
 	
-14. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
+15. You can observe the pipeline running on the canvas. Capsules in-process will be animated slightly, and connections actively passing data between assets or capsules will also be animated (and blue).
 
 	<p align="center">
 	<img src="./images/pipeline_running_1.png">
@@ -194,22 +225,16 @@ Here's the detailed walkthrough:
 	<img src="./images/pipeline_run_successfully_completed.png">
 	</p>
 	
-15. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see it displayed.
+16. Completed runs appear along the right side of the display (toggle ***Reproducibility*** in the upper-right to see this, as needed). Familiarize yourself with the file & folder structure of the results. They closely mirror the structure that is uploaded to the Google bucket. Click the ***pipeline\_config.json*** file to see that file displayed in the main view. Some parts of this file will be similar to your input data config file from above, but other parts will be new. In the file, find the ***NEUROGLANCER\_URI*** entry. It will have the form of `gs://keith-dev/ng_precomputed_annotations_unreleased/<SOME_TIMESTAMP>/`.
 
 	<p align="center">
-	<img src="./images/results.png" width="33%">
+	<img src="./images/results.png">
 	</p>
 	
-16. Some parts of this file will be similar to your input data config file from above, but other parts will be new. In the file, find the ***NEUROGLANCER\_URI*** entry. It will have the form of `gs://keith-dev/ng_precomputed_annotations_unreleased/<SOME_TIMESTAMP>/`. Copy this value.
+17. Copy this value. In a Neuroglancer view, add a new layer. In the upper-right corner, select ***Source***, and paste the URI you just copied. Neuroglancer will immediately begin using the new three-part index.
 
 	<p align="center">
 	<img src="./images/results_neuroglancer_uri.png">
-	</p>
-	
-17. In a Neuroglancer view, add a new layer. In the upper-right corner, select ***Source***, and paste the URI you just copied. Neuroglancer will immediately begin using the new three-part index.
-
-	<p align="center">
-	<img src="./images/neuroglancer.png">
 	</p>
 	
 18. The admin (Keith) has the option to move unreleased indices to a more public-facing URI (one that doesn't have "unreleased" in the URI). Ask Keith for help with this as needed.
