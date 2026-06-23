@@ -1,5 +1,10 @@
 {
 	"version": 1,
+	"general": {
+		"title": "Annotation Spatial Index Builder",
+		"instructions": "Annotation Spatial Index Builder",
+		"help_text": "Annotation Spatial Index Builder\n\n\n"
+	},
 	"processes": [
 		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
 		"capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
