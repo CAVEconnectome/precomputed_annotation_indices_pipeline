@@ -4,7 +4,7 @@
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -38,20 +38,14 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__data-config/$path1" "capsule/data/$path1" # id: 7c301f12-d69e-4e51-9b9d-9df03066bc1b
+	ln -s "/tmp/data/${params.data_name}__data-config/$path1" "capsule/data/$path1" # id: 7c301f12-d69e-4e51-9b9d-9df03066bc1b
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_1_args}
 
@@ -62,7 +56,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_13 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -89,18 +83,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_13 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_13_args}
 
@@ -111,7 +99,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_13 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -136,18 +124,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_args}
 
@@ -158,7 +140,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -183,20 +165,14 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	ln -s "/tmp/data/synapses_pni_2_v1_filtered_view__v1412__test1" "capsule/data/synapses_pni_2_v1_filtered_view__v1412__test1" # id: bacb8982-892d-437b-b732-de1257e7a398
+	ln -s "/tmp/data/${params.datasubset_name}" "capsule/data/${params.datasubset_name}" # id: bacb8982-892d-437b-b732-de1257e7a398
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_3_args}
 
@@ -207,7 +183,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -234,18 +210,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_5_args}
 
@@ -256,7 +226,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -283,18 +253,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_9_args}
 
@@ -305,7 +269,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_10 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -332,18 +296,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_10 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_10_args}
 
@@ -354,7 +312,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_10 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_14 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -381,18 +339,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_14 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_14_args}
 
@@ -403,7 +355,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_14 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -432,18 +384,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_4_args}
 
@@ -454,7 +400,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -481,18 +427,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_6_args}
 
@@ -503,7 +443,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_11 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -530,18 +470,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_11 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_11_args}
 
@@ -552,7 +486,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_11 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_15 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -579,18 +513,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_15 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_15_args}
 
@@ -601,7 +529,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_15 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -628,18 +556,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_7_args}
 
@@ -650,12 +572,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_12 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
+	publishDir "${params.results_path}", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/'
@@ -678,18 +600,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_12 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_12_args}
 
@@ -700,12 +616,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_12 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_16 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
+	publishDir "${params.results_path}", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/'
@@ -729,18 +645,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_16 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_16_args}
 
@@ -751,12 +661,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_16 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
+	publishDir "${params.results_path}", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/'
@@ -779,18 +689,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_8_args}
 
@@ -801,12 +705,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_17 {
 	tag 'capsule-5443678'
-	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
+	publishDir "${params.results_path}", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/'
@@ -832,18 +736,12 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_17 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] cloning git repo..."
-	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	else
-		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
-	fi
-	git -C capsule-repo checkout 49bc10c36b4291128ad561e2486775acc61cc697 --quiet
-	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
-	rm -rf capsule-repo
+	echo "[${task.tag}] Adding capsule git repo..."
+	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
+	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_args}
 
@@ -853,10 +751,10 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_17 {
 
 workflow {
 	// input data
-	synapses_pni_2_v1_filtered_view__v1412__data_config_to_build_precomputed_annotation_indices_all_capsules_via_git_1 = Channel.fromPath("../data/synapses_pni_2_v1_filtered_view__v1412__data-config/*", type: 'any', relative: true)
+	data_config_to_build_precomputed_annotation_indices_all_capsules_via_git_1 = Channel.fromPath("../data/${params.data_name}__data-config/*", type: 'any', relative: true)
 
 	// run processes
-	capsule_build_precomputed_annotation_indices_all_capsules_via_git_1(synapses_pni_2_v1_filtered_view__v1412__data_config_to_build_precomputed_annotation_indices_all_capsules_via_git_1)
+	capsule_build_precomputed_annotation_indices_all_capsules_via_git_1(data_config_to_build_precomputed_annotation_indices_all_capsules_via_git_1)
 	capsule_build_precomputed_annotation_indices_all_capsules_via_git_13(capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_13_23.collect())
 	capsule_build_precomputed_annotation_indices_all_capsules_via_git_2(capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_2.collect())
 	capsule_build_precomputed_annotation_indices_all_capsules_via_git_3(capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_3_3.collect())
