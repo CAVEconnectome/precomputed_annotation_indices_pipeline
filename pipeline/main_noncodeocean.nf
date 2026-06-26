@@ -4,7 +4,7 @@
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -51,7 +51,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -92,7 +92,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -135,7 +135,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -177,7 +177,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -220,7 +220,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -263,7 +263,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -306,7 +306,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	tag 'capsule-5443678'
-	container "python:3.12"
+	container "precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
