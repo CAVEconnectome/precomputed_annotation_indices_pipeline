@@ -35,12 +35,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 
 	ln -s "/tmp/data/${params.data_name}__data-config/$path1" "capsule/data/$path1" # id: 7c301f12-d69e-4e51-9b9d-9df03066bc1b
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_1_args}
 
@@ -76,12 +77,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_2_args}
 
@@ -119,12 +121,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 
 	ln -s "/tmp/data/${params.datasubset_name}" "capsule/data/${params.datasubset_name}" # id: bacb8982-892d-437b-b732-de1257e7a398
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_3_args}
 
@@ -161,12 +164,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_5_args}
 
@@ -204,12 +208,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_4_args}
 
@@ -247,12 +252,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_6_args}
 
@@ -290,12 +296,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_7_args}
 
@@ -334,12 +341,13 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
-	echo "[${task.tag}] Adding capsule git repo..."
-	mv /capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	echo "[${task.tag}] cloning git repo..."
+	git -c credential.helper= clone https://github.com/CAVEconnectome/precomputed_annotation_indices_capsules.git capsule-repo
+	mv capsule-repo/code capsule/code && ln -s $PWD/capsule/code /code
+	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
-	pip install -r requirements.txt --break-system-packages
 	chmod +x run
 	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_8_args}
 
