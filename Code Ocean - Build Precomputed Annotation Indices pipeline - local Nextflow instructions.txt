@@ -69,7 +69,7 @@ ________________________________________________________________________________
 RUNNING THE PIPELINE
 ----------
 
-When running the pipeline, you specify the overall data name and the specific data subset you wish to run. If you only have one (the entire dataset) or you intend to process the entire dataset in a give run, then pass in the same string for both the "data_name" and "datasubset_name" arguments below.
+When running the pipeline, you specify various Nextflow configuration files as well as the overall data name and the specific data subset you wish to run. If you only have one (the entire dataset) or you intend to process the entire dataset in a give run, then pass in the same string for both the "data_name" and "datasubset_name" arguments below. To run a subset, leave the data_name the same but alter the datasubset_name.
 
 You need to be in the pipeline/ directory to run it, so:
 $ cd pipeline
@@ -77,14 +77,19 @@ $ cd pipeline
 To run the pipeline against a subset, do this (substituting your own data and subset names in the last two lines of the command):
 $ rm -rf work && \
   DATA_PATH=$PWD/../data \
-  nextflow -log ../results/nextflow/nextflow.log run main.nf \
-  --data_name synapses_pni_2_v1_filtered_view__v1412 \
+  nextflow -c nextflow_all_indices.config -log ../results/nextflow/nextflow.log \
+  run main_noncodeocean_all_indices.nf \
+  --data_name       synapses_pni_2_v1_filtered_view__v1412 \
   --datasubset_name synapses_pni_2_v1_filtered_view__v1412__test
 
-Or to process a full dataset, use this (pass the same value for both arguments):
-  --data_name synapses_pni_2_v1_filtered_view__v1412 \
+Or to process a full dataset, indicate the full dataset (by simply passing the same value for both arguments):
+  --data_name       synapses_pni_2_v1_filtered_view__v1412 \
   --datasubset_name synapses_pni_2_v1_filtered_view__v1412
 
+Depending on the development state of the repo, you may see some extraneous files, such as the following:
+  nextflow_id_idx.config (only builds the ID index)  main_noncodeocean_id_idx.nf (only builds the ID index)
+  nextflow_id_relation_indices.config (only builds the ID and relation indices)  main_noncodeocean_id_relation_indices.nf (only builds the ID and relation indices)  main.nf (leftover)
+You can safely dismiss them. I intend to clean things up, but the repo remains in a state of ongoing development.  
 ____________________________________________________________________________________________________
 SEEING THE RESULTS
 ----------
