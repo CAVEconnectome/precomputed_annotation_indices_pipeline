@@ -20,8 +20,9 @@ precomputed_annotation_indices_pipeline/
   metadata/
     metadata.yml
   pipeline/
-    main.nf
-    nextflow.config
+    nextflow_all_indices.config
+    main_noncodeocean_all_indices.nf
+    <...additional extraneous files you can ignore (more info below)...>
   data_config_template.json  data_config_example.json
   data/
     <...3 subdirectories...>
