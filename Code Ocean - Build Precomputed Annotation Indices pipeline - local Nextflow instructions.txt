@@ -87,10 +87,12 @@ Or to process a full dataset, indicate the full dataset (by simply passing the s
   --data_name       synapses_pni_2_v1_filtered_view__v1412 \
   --datasubset_name synapses_pni_2_v1_filtered_view__v1412
 
-Depending on the development state of the repo, you may see some extraneous files, such as the following:
+Remember, the values passed to the data_name and datasubset_name arguments come from, correspond to, and must match the keys of the "data_sizes" section of the data config json file, which you created earlier (see above).
+
+Depending on the development state of the repo, you may see some extraneous files in the pipeline/ directory, such as the following:
   nextflow_id_idx.config (only builds the ID index)  main_noncodeocean_id_idx.nf (only builds the ID index)
-  nextflow_id_relation_indices.config (only builds the ID and relation indices)  main_noncodeocean_id_relation_indices.nf (only builds the ID and relation indices)  main.nf (Used by CodeOcean. You can ignore this when running locally.)
-You can safely dismiss them. I intend to clean things up, but the repo remains in a state of ongoing development.  
+  nextflow_id_relation_indices.config (only builds the ID and relation indices)  main_noncodeocean_id_relation_indices.nf (only builds the ID and relation indices)  main.nf (used by CodeOcean; you can ignore this when running locally)
+You can safely dismiss the files shown above. I intend to clean things up, but the repo remains in a state of ongoing development.  
 ____________________________________________________________________________________________________
 SEEING THE RESULTS
 ----------
