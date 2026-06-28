@@ -88,7 +88,7 @@ Or to process a full dataset, indicate the full dataset (by simply passing the s
 
 Depending on the development state of the repo, you may see some extraneous files, such as the following:
   nextflow_id_idx.config (only builds the ID index)  main_noncodeocean_id_idx.nf (only builds the ID index)
-  nextflow_id_relation_indices.config (only builds the ID and relation indices)  main_noncodeocean_id_relation_indices.nf (only builds the ID and relation indices)  main.nf (leftover)
+  nextflow_id_relation_indices.config (only builds the ID and relation indices)  main_noncodeocean_id_relation_indices.nf (only builds the ID and relation indices)  main.nf (Used by CodeOcean. You can ignore this when running locally.)
 You can safely dismiss them. I intend to clean things up, but the repo remains in a state of ongoing development.  
 ____________________________________________________________________________________________________
 SEEING THE RESULTS
