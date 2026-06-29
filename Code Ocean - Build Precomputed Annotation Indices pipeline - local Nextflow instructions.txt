@@ -38,7 +38,7 @@ You need to move your data into the repo at the path where Nextflow will expect 
 pipeline/
   ...
 metadata/
-  ...
+  <...Code Ocean files you can ignore...>
 data/  synapses_pni_2_v1_filtered_view__v1412__data-config/    synapses_pni_2_v1_filtered_view__v1412__data-config.json  synapses_pni_2_v1_filtered_view__v1412__test/
     synapses_pni_2_v1_filtered_view__1-root-ids_337312429-row-limit_2108-rows.csv  synapses_pni_2_v1_filtered_view__v1412/
     synapses_pni_2_v1_filtered_view__10-root-ids_337312429-row-limit_24426-rows.csv
