@@ -5,6 +5,8 @@ NEXTFLOW AND DOCKER PREREQUISITES
 First, install Nextflow, which itself will require installing Java:
   https://www.nextflow.io/docs/latest/install.html
 
+Why didn't I wrap the Nextflow requirement in a Docker image? Because it would impose considerable bloat on the git repo to build and include a Docker image containing all of Java (a Nextflow requirement), in addition to including Nextflow itself (which admittedly is fairly small), all just to encapsulte the relatively straightforward process of installing Nextflow and/or Java yourself. This was an executive decision on my part. I hope it doesn't complicate things for users of this system, but I felt it was better to keep the repo's footprint smaller in this regard. Please contact me (Keith Wiley) for any assistance.
+
 Then, on a Mac at any rate, you need to download and run the Docker desktop app. Go for it. I can't offer guidance on other platforms, but I'm sure it's similar. Nextflow will then utilize the running Docker environment for the pipeline.
 
 ____________________________________________________________________________________________________
