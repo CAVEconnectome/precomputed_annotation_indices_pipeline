@@ -75,7 +75,17 @@
 
 
 
+    REMOVE THIS LINE -- EACH OF THE FOLLOWING SECTIONS IS OPTION. THEY CAN BE REMOVED ENTIRELY OR LEFT AS EMPTY OBJECTS, AS SHOWN BELOW. THEY ARE PROVIDED IF NECESSARY. ASK KEITH WILEY ABOUT THEM.
     "pipeline_config": {
+        "docstring": "All settings in this section are optional. This section can be completely empty if you wish. However, if you need to override any default pipeline configuration settings, they go here. See the pipeline documentation for a description of such options.",
+    },
+    "pipeline_id_config": {
+        "docstring": "All settings in this section are optional. This section can be completely empty if you wish. However, if you need to override any default pipeline configuration settings, they go here. See the pipeline documentation for a description of such options.",
+    },
+    "pipeline_relation_config": {
+        "docstring": "All settings in this section are optional. This section can be completely empty if you wish. However, if you need to override any default pipeline configuration settings, they go here. See the pipeline documentation for a description of such options.",
+    },
+    "pipeline_spatial_config": {
         "docstring": "All settings in this section are optional. This section can be completely empty if you wish. However, if you need to override any default pipeline configuration settings, they go here. See the pipeline documentation for a description of such options.",
     }
 }
