@@ -7,12 +7,6 @@
 			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2"
 		},
 		{
-			"id": "xy-edge__7c301f12-d69e-4e51-9b9d-9df03066bc1b-capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
-			"selected": false,
-			"source": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
-			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1"
-		},
-		{
 			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_2-capsule_build_precomputed_annotation_indices_all_capsules_via_git_4",
 			"selected": false,
 			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
@@ -265,15 +259,6 @@
 			"type": "capsule"
 		},
 		{
-			"id": "7c301f12-d69e-4e51-9b9d-9df03066bc1b",
-			"position": {
-				"x": 1741.5861887191236,
-				"y": -300.07263484274733
-			},
-			"selected": false,
-			"type": "dataset"
-		},
-		{
 			"data": {
 				"capsule_id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 			},
@@ -463,7 +448,7 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1781504442670,
+	"timestamp": 1783619862571,
 	"viewport": {
 		"x": -318.35059973844193,
 		"y": -526.8449840886456,
