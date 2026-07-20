@@ -4,7 +4,7 @@
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -57,7 +57,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_13 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -101,7 +101,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_13 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -143,7 +143,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_2 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -187,7 +187,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_3 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -231,7 +231,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -275,7 +275,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_10 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -319,7 +319,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_10 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_14 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -363,7 +363,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_14 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -409,7 +409,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_4 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -453,7 +453,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_6 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_11 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -497,7 +497,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_11 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_15 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -541,7 +541,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_15 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -585,7 +585,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_7 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_12 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -630,7 +630,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_12 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_16 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -676,7 +676,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_16 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
@@ -721,7 +721,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_17 {
 	tag 'capsule-5443678'
-	container "precomputed-annotation-indices:1.0.0"
+	container "kbwiley/precomputed-annotation-indices:1.0.0"
 
 	cpus 1
 	memory '7.5 GB'
