@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:ac0d3f7b823266757d7edea57ef0eac74a27bf182f539b939d34fe942b9defb1
+// hash:sha256:be12c531c2be440d914759c7c4b51161dd4c55bd622f968424106c7b46631c5c
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -797,8 +797,8 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_18 {
-	tag 'capsule-3540450'
-	container "$REGISTRY_HOST/published/65b548ab-780c-4f5a-bfb6-1a72653eeef7:v1"
+	tag 'capsule-5443678'
+	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8"
 
 	cpus 1
 	memory '7.5 GB'
@@ -816,7 +816,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_18 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=65b548ab-780c-4f5a-bfb6-1a72653eeef7
+	export CO_CAPSULE_ID=1c40bced-b7eb-41cb-9d2d-1d714f8e31e8
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -827,9 +827,9 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_18 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
+		git -c credential.helper= clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5443678.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo

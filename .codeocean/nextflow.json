@@ -547,10 +547,9 @@
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_18",
 			"capsule": {
-				"id": "65b548ab-780c-4f5a-bfb6-1a72653eeef7",
+				"id": "1c40bced-b7eb-41cb-9d2d-1d714f8e31e8",
 				"name": "Build precomputed annotation indices - all capsules via git",
-				"slug": "3540450",
-				"version": 1,
+				"slug": "5443678",
 				"app_panel": true
 			},
 			"resources": {
