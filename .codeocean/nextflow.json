@@ -559,6 +559,18 @@
 			},
 			"inputs": [
 				{
+					"id": "wu8Rh3qNslG3B7Iv",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_13",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git"
+				},
+				{
+					"id": "xx59kDVsCdJ216cs",
+					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_1",
+					"type": "capsule",
+					"name": "Build precomputed annotation indices - all capsules via git"
+				},
+				{
 					"id": "F4PEQhu44b4Khza0",
 					"source_id": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_16",
 					"type": "capsule",
