@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:b9509b9543f31c43341112d4ad17af513f5a0a480dc35f83d586cd527176c2b5
+// hash:sha256:e72f5c97f2c411e4283c82a2a127f4ebe6e97df86af56d576ce764a66bdcdbfa
 
 // capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
@@ -19,7 +19,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_1 {
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_10_16
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_13_22
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_14_23
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_33
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_34
 
 	script:
 	"""
@@ -68,7 +68,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_13 {
 	output:
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_14_24
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_15_26
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_31
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_32
 
 	script:
 	"""
@@ -213,7 +213,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_5 {
 	output:
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_6_8
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_7_11
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_32
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_33
 
 	script:
 	"""
@@ -262,7 +262,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_9 {
 	output:
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_10_15
 	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_11_17
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_30
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_31
 
 	script:
 	"""
@@ -708,7 +708,7 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_16 {
 
 	output:
 	path 'capsule/results/*'
-	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_34
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_18_35
 
 	script:
 	"""
@@ -794,6 +794,52 @@ process capsule_build_precomputed_annotation_indices_all_capsules_via_git_8 {
 }
 
 // capsule - Build precomputed annotation indices - all capsules via git
+process capsule_build_precomputed_annotation_indices_all_capsules_via_git_18 {
+	tag 'capsule-3540450'
+	container "$REGISTRY_HOST/published/65b548ab-780c-4f5a-bfb6-1a72653eeef7:v1"
+
+	cpus 1
+	memory '7.5 GB'
+
+	input:
+	path 'capsule/data/'
+
+	output:
+	path 'capsule/results/*', emit: to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_30
+
+	script:
+	"""
+	#!/usr/bin/env bash
+	set -e
+
+	export CO_CAPSULE_ID=65b548ab-780c-4f5a-bfb6-1a72653eeef7
+	export CO_CPUS=1
+	export CO_MEMORY=8053063680
+
+	mkdir -p capsule
+	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
+	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
+	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
+
+	echo "[${task.tag}] cloning git repo..."
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
+	else
+		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3540450.git" capsule-repo
+	fi
+	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
+	rm -rf capsule-repo
+
+	echo "[${task.tag}] running capsule..."
+	cd capsule/code
+	chmod +x run
+	./run ${params.capsule_build_precomputed_annotation_indices_all_capsules_via_git_18_args}
+
+	echo "[${task.tag}] completed!"
+	"""
+}
+
+// capsule - Build precomputed annotation indices - all capsules via git
 process capsule_build_precomputed_annotation_indices_all_capsules_via_git_17 {
 	tag 'capsule-5443678'
 	container "$REGISTRY_HOST/capsule/1c40bced-b7eb-41cb-9d2d-1d714f8e31e8:94b89e4eedd63b0fd3d7ea314137edb6"
@@ -864,5 +910,6 @@ workflow {
 	capsule_build_precomputed_annotation_indices_all_capsules_via_git_12(capsule_build_precomputed_annotation_indices_all_capsules_via_git_11.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_12_20.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_10.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_12_21.flatten())
 	capsule_build_precomputed_annotation_indices_all_capsules_via_git_16(capsule_build_precomputed_annotation_indices_all_capsules_via_git_15.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_16_28.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_14.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_16_29.flatten())
 	capsule_build_precomputed_annotation_indices_all_capsules_via_git_8(capsule_build_precomputed_annotation_indices_all_capsules_via_git_7.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_8_12.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_6.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_8_13.flatten())
-	capsule_build_precomputed_annotation_indices_all_capsules_via_git_17(capsule_build_precomputed_annotation_indices_all_capsules_via_git_9.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_30.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_13.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_31.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_5.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_32.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_33, capsule_build_precomputed_annotation_indices_all_capsules_via_git_16.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_34.collect())
+	capsule_build_precomputed_annotation_indices_all_capsules_via_git_18(capsule_build_precomputed_annotation_indices_all_capsules_via_git_16.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_18_35)
+	capsule_build_precomputed_annotation_indices_all_capsules_via_git_17(capsule_build_precomputed_annotation_indices_all_capsules_via_git_18.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_30.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_9.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_31.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_13.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_32.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_5.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_33.collect(), capsule_build_precomputed_annotation_indices_all_capsules_via_git_1.out.to_capsule_build_precomputed_annotation_indices_all_capsules_via_git_17_34)
 }
