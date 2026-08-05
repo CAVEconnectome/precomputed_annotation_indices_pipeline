@@ -200,12 +200,6 @@
 			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_17"
 		},
 		{
-			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_5-capsule_build_precomputed_annotation_indices_all_capsules_via_git_17",
-			"selected": false,
-			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_5",
-			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_17"
-		},
-		{
 			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_9-capsule_build_precomputed_annotation_indices_all_capsules_via_git_17",
 			"selected": false,
 			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_9",
@@ -237,6 +231,11 @@
 			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_13-capsule_build_precomputed_annotation_indices_all_capsules_via_git_18",
 			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_13",
 			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_18"
+		},
+		{
+			"id": "xy-edge__capsule_build_precomputed_annotation_indices_all_capsules_via_git_7-capsule_build_precomputed_annotation_indices_all_capsules_via_git_17",
+			"source": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_7",
+			"target": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_17"
 		}
 	],
 	"nodes": [
@@ -471,14 +470,14 @@
 				"x": 2342.208660191421,
 				"y": 2098.7953380901945
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1785263410515,
+	"timestamp": 1785960132580,
 	"viewport": {
-		"x": -316.9210203733495,
-		"y": 101.07416073908945,
-		"zoom": 0.3
+		"x": 128.63528334811917,
+		"y": 287.3572043590987,
+		"zoom": 0.3351861414216659
 	}
 }
