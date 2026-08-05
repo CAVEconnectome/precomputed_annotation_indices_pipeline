@@ -14,7 +14,16 @@
 			"resources": {
 				"cpus": 1,
 				"memory": 8
-			}
+			},
+			"inputs": [
+				{
+					"id": "lQhTOKOtDJGE1rhT",
+					"source_id": "0dea7ca7-77a0-412b-8e48-03563448121b",
+					"type": "dataset",
+					"name": "synapses_pni_2_v1_filtered_view__v1412__data-config",
+					"source_path": "synapses_pni_2_v1_filtered_view__v1412__data-config/"
+				}
+			]
 		},
 		{
 			"name": "capsule_build_precomputed_annotation_indices_all_capsules_via_git_2",
