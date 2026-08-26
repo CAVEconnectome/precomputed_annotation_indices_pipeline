@@ -47,7 +47,7 @@ Here are the main stages to produce a precomputed annotation index from an annot
 Here's the detailed walkthrough:
 
 1. Export your data table as a local CSV or Parquet file. Take note of the exact column names and ordering. You will need that.
-2. Create a data config json file. The name doesn't matter.
+2. Create a data config json file. The name doesn't matter, so long as it ends with a '.json' extension.
 	1. Start from a local copy of the template provided in this repo (*data\_config\_template.json*) and populate all the required fields (indicated in all-caps). This file must end up as legal JSON. Pass it through a JSON validator after you fill it in. Several are readily found online. If aspects of the template are confusing, use the example file (*data\_config\_example.json*) to guide you. It shows a fully populated config file for the MICrONS synapse annotation table.
 	2. Amongst other aspects of the data for this template, you will need:
 		1. The size of the CSV file in bytes and rows (i.e., number of annotations).
